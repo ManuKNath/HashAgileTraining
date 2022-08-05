@@ -14,11 +14,9 @@ end
 array.each do |num|
     if num>0
         num_pos += 1
-    end
-    if num<0
+    elsif num<0
         num_neg += 1
-    end
-    if num == 0
+    else
         num_zero += 1
     end
     if num%2 == 0

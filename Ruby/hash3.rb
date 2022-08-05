@@ -1,4 +1,17 @@
-antonyms = {
+antonyms = Hash.new("Not found")
+
+antonyms["Right"] = "Left"
+antonyms["Up"] = "Down"
+antonyms["Old"] = "Young"
+antonyms["Wise"] = "Fool"
+antonyms["Fast"] = "Slow"
+antonyms["Hard"] = "Easy"
+antonyms["Arrogant"] = "Humble"
+antonyms["Innocent"] = "Guilty"
+antonyms["Broad"] = "Narrow"
+antonyms["Safe"] = "Unsafe"
+=begin
+{
     "Right"=>"Left",
     "Up"=>"Down",
     "Old"=>"Young",
@@ -9,15 +22,9 @@ antonyms = {
     "Innocent"=>"Guilty",
     "Broad"=>"Narrow",
     "Safe"=>"Unsafe"
-  }
+}
+=end
 
 puts "Enter a word"
 word = gets.chomp.capitalize()
-antonyms.each do |key, value|
-    if word.casecmp(key)==0
-        puts "Antonym of #{word} is #{value}"
-        exit()
-    end
-end
-
-puts "Not found"
+puts "Antonym of #{word} is #{antonyms[word]}"

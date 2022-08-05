@@ -1,9 +1,4 @@
 array = []
-num_pos = 0
-num_neg = 0
-num_even = 0
-num_odd = 0
-num_zero = 0
 
 puts "Enter the number in each line"
 10.times do
@@ -12,5 +7,7 @@ puts "Enter the number in each line"
 end
 
 puts "Inputted array is : #{array}"
-array.reverse!
-puts "Reversed array is : #{array}"
+
+puts "Arrays after spliting"
+puts "#{array.slice(0,5)}"
+puts "#{array.slice(5,10)}"
