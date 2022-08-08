@@ -16,8 +16,11 @@ n.times do
     array.push(num)
 end
 puts "Inputted array : #{array}"
+=begin
 (n-1).times do
     #puts array.shift()
     array[n-1] = array.shift()
 end
 puts "Array after shifting circularly right : #{array}"
+=end
+puts "Array after right circular shift : #{array.rotate(-1)}"
