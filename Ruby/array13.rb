@@ -1,3 +1,9 @@
+=begin
+Ask user to give integer inputs to make a array.
+Store only even values given and print the array.
+=end
+
+
 array = []
 puts "Enter the length of array"
 len = gets.chomp.to_i

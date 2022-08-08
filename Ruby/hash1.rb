@@ -1,3 +1,9 @@
+=begin
+Ask user to give name and marks of 10 different students. 
+Store them in hash.
+=end
+
+
 student_details = Hash.new
 
 10.times do

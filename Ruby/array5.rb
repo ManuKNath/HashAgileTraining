@@ -1,3 +1,8 @@
+=begin
+Write a program to find the sum of all elements of an array.
+=end
+
+
 array = []
 
 puts "Enter the number in each line"

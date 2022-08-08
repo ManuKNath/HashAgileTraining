@@ -1,3 +1,9 @@
+=begin
+Take 10 integer inputs from user and store them in an array. 
+Now, copy all the elements in another array but in reverse order.
+=end
+
+
 array = []
 num_pos = 0
 num_neg = 0

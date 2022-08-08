@@ -1,3 +1,11 @@
+=begin
+Use hash to store antonyms of words.
+E.g.- 'Right'=>'Left', 'Up'=>'Down', etc. 
+Display all words and then ask user to 
+enter a word and display antonym of it.
+=end
+
+
 antonyms = Hash.new("Not found")
 
 antonyms["Right"] = "Left"

@@ -1,3 +1,11 @@
+=begin
+Take 10 integer inputs from user and store them in an array.
+Again ask user to give a number. 
+Now, tell user whether that number is present in array or not.
+( Iterate over array using while loop ).
+=end
+
+
 array = []
 
 puts "Enter the number in each line"

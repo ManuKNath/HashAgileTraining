@@ -1,3 +1,8 @@
+=begin
+Find the largest and smallest elements of an array.
+=end
+
+
 array = []
 
 puts "Enter the number in each line"

@@ -1,3 +1,8 @@
+=begin
+Sort the hash created in previous example according to marks.
+=end
+
+
 student_details = Hash.new
 
 2.times do

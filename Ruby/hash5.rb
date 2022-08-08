@@ -1,3 +1,11 @@
+=begin
+Count the number of occurrence of each leter in word "MISSISSIPPI".
+Store count of every leter with the leter in a dictionary.
+
+From the previous question, sort according to the number of letters.
+=end
+
+
 frequency = Hash.new
 
 words = "MISSISSIPPI"

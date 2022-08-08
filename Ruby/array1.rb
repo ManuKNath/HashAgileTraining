@@ -1,3 +1,9 @@
+=begin
+Take 10 integer inputs from user and store
+them in an array and print them on screen.
+=end
+
+
 array = []
 
 10.times do

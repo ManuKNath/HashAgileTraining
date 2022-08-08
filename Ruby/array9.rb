@@ -1,3 +1,9 @@
+=begin
+Write a program to print sum, average of all numbers,
+smallest and largest element of an array.
+=end
+
+
 array = []
 
 puts "Enter the number in each line"
