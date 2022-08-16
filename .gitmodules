@@ -1,0 +1,3 @@
+[submodule "RoR/tasklist"]
+	path = RoR/tasklist
+	url = https://github.com/ManuKNath/HashAgileTraining.git
