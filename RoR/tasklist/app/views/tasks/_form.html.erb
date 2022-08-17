@@ -22,10 +22,8 @@
   </div>
 
   <div>
-    <% value={} %>
-    <% User.all.each {|x| value[x.id] = x.firstname}%>
-    <%= form.label :user, style: "display: block" %>
-    <%= form.select :user_id, :Assignee => value.sort.map {|k,v| [v,k]} %>
+    <%= form.label :Assignee, style: "display: block" %>
+    <%= form.select :user_id, User.all.collect { |p| [ p.firstname, p.id ] }, include_blank: false %>
   </div>
 
 

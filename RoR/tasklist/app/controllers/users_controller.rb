@@ -8,6 +8,13 @@ class UsersController < ApplicationController
 
   # GET /users/1 or /users/1.json
   def show
+    puts set_user
+    @task = Task.all.select { |m| m.user_id == set_user.id }
+    @tasks_list = []
+    @task.each do |x|
+      @tasks_list.append(x.taskname)
+    end
+    #puts @tasks_list
   end
 
   # GET /users/new
