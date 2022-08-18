@@ -4,7 +4,10 @@
 
 <p>
     <strong>Assigned Tasks:</strong>
-    <%= @tasks_list %>
+    <% @tasks_list.each do |task| %>
+      <br>
+      <%= task %>
+    <%end %>
 </p>
 
 <div>
