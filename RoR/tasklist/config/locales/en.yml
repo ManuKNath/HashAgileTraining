@@ -31,8 +31,6 @@
 
 en:
   hello: "Hello world"
-  static_content:
-    welcome: "Welcome to Task Management"
   link:
    sign_up: "Sign Up"
    sign_in: "Sign In"

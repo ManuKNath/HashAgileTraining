@@ -46,6 +46,9 @@ gem "bootsnap", require: false
 # User login
 gem 'devise', '~> 4.8', '>= 4.8.1'
 
+#internationalization
+gem 'rails-i18n'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

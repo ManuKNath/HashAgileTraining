@@ -31,8 +31,6 @@
 
 fr:
   hello: "Bonjour Monde"
-  static_content:
-    welcome: "Bienvenue dans la gestion des tâches"
   link:
    sign_up: "S'inscrire"
    sign_in: "S'identifier"
