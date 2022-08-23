@@ -7,16 +7,16 @@ class MailServiceMailer < ApplicationMailer
       mail(to: @user.email, subject: "Verify your account")
     end
 
-    def task_mail(user,tasklist)
+    def task_assign(user,task)
       @user=user
-      @tasklist=tasklist
+      @task=task
       mail(to: @user.email,subject:"Task assigned")
   
     end
   
-    def task_update(user,tasklist)
+    def task_update(user,task)
       @user=user
-      @tasklist=tasklist
+      @task=task
       mail(to: @user.email,subject:"Task Updated")
   
     end

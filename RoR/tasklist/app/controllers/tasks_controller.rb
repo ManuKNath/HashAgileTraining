@@ -26,8 +26,8 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.save
-        @user = User.find_by_id(@tasklist.user_id)
-        MailServiceMailer.task_mail(@user,@tasklist).deliver_now
+        @user = User.find_by_id(@task.user_id)
+        MailServiceMailer.task_assign(@user,@task).deliver_now
         format.html { redirect_to task_url(@task), notice: "Task was successfully created." }
         format.json { render :show, status: :created, location: @task }
       else
@@ -41,8 +41,8 @@ class TasksController < ApplicationController
   def update
     respond_to do |format|
       if @task.update(task_params)
-        @user = User.find_by_id(@tasklist.user_id)
-        MailServiceMailer.task_update(@user,@tasklist).deliver_now
+        @user = User.find_by_id(@task.user_id)
+        MailServiceMailer.task_update(@user,@task).deliver_now
         format.html { redirect_to task_url(@task), notice: "Task was successfully updated." }
         format.json { render :show, status: :ok, location: @task }
       else
