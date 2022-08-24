@@ -49,6 +49,13 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 #internationalization
 gem 'rails-i18n'
 
+
+gem 'rufus-scheduler', '~> 3.2'
+
+
+gem 'whenever', require: false
+
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

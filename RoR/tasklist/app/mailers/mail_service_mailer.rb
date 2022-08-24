@@ -1,7 +1,7 @@
 class MailServiceMailer < ApplicationMailer
     def verify_user(user)
       @user = user
-      @url='http://127.0.0.1:3000/users/sign_in'
+      #@url='http://127.0.0.1:3000/users/sign_in'
       
   
       mail(to: @user.email, subject: "Verify your account")
@@ -19,5 +19,11 @@ class MailServiceMailer < ApplicationMailer
       @task=task
       mail(to: @user.email,subject:"Task Updated")
   
+    end
+
+    def duedate_remainder(user, task)
+      @user = user
+      @task = task
+      mail(to: @user.email,subject:"Due date remainder for your task")
     end
 end

@@ -1,0 +1,13 @@
+<h1>Hey, <%= @user.firstname %> <%= @user.lastname %> </h1>
+<br>
+<br>
+<p>
+    Due date for this task is passed. Please complete it as soon as possible.
+    <br> Task:<b><%= @task.taskname %></b>
+    <br> date:<b><%= @task.duedate %></b>
+    <% if @task.status %>
+        <br><strong>Status: </strong> Completed
+    <%else%>
+        <br><strong>Status: </strong> pending
+    <%end%>
+</p> 
