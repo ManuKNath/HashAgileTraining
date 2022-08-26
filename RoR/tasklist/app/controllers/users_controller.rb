@@ -5,6 +5,11 @@ class UsersController < ApplicationController
   # GET /users or /users.json
   def index
     @users = User.all
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data User.to_csv(@users), filename: "users-#{Date.today}.csv" }
+    end
   end
 
   # GET /users/1 or /users/1.json

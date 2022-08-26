@@ -7,4 +7,16 @@ class Task < ApplicationRecord
     #         DueDateRemainderJob.set(wait_until: self.duedate.to_s).perform_later(self)
     #     end
     # end
+
+
+
+    def self.to_csv(collection)
+        CSV.generate(col_sep: ',') do |csv|
+            csv << column_names
+            
+            collection.find_each do |record|
+                csv << record.attributes.values
+            end
+        end
+    end
 end
