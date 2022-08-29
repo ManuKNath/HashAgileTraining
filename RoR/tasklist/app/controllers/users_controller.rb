@@ -2,6 +2,8 @@ class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
   before_action :authenticate_user!
 
+  protect_from_forgery with: :null_session
+
   # GET /users or /users.json
   def index
     @users = User.all
@@ -9,6 +11,15 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html
       format.csv { send_data User.to_csv(@users), filename: "users-#{Date.today}.csv" }
+      format.pdf do
+        pdf = UserPdf.new(@users)
+        #pdf.text "Hellow World!"
+        send_data pdf.render,
+          filename: "user.pdf",
+          type: 'application/pdf',
+          disposition: 'attachment'
+      end
+      
     end
   end
 

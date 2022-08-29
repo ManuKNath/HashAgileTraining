@@ -2,6 +2,8 @@ class TasksController < ApplicationController
   before_action :set_task, only: %i[ show edit update destroy ]
   before_action :authenticate_user!
 
+  protect_from_forgery with: :null_session
+
   require 'csv'
 
   # GET /tasks or /tasks.json
@@ -10,7 +12,15 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.csv { send_data Task.to_csv(@tasks), filename: "users-#{Date.today}.csv" }
+      #format.csv { send_data Task.to_csv(@tasks), filename: "users-#{Date.today}.csv" }
+      format.pdf do
+        pdf = TaskPdf.new(@tasks)
+        #pdf.text "Hellow World!"
+        send_data pdf.render,
+          filename: "task.pdf",
+          type: 'application/pdf',
+          disposition: 'attachment'
+      end
     end
   end
 
@@ -52,9 +62,11 @@ class TasksController < ApplicationController
         MailServiceMailer.task_update(@user,@task).deliver_now
         format.html { redirect_to task_url(@task), notice: "Task was successfully updated." }
         format.json { render :show, status: :ok, location: @task }
+        format.js
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @task.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end

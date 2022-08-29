@@ -1,7 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Users</h1>
-<%= link_to 'Export CSV', users_path(format: "csv") %>
+<%= link_to 'Export as CSV', users_path(format: "csv") %>
+<%= link_to 'Export as PDF', users_path(format: "pdf") %>
 <div id="users">
   <% @users.each do |user| %>
     <%= render user %>

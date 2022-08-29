@@ -2,7 +2,8 @@
 
 <h1>Tasks</h1>
 
-<%= link_to 'Export CSV', tasks_path(format: "csv") %>
+<%= link_to 'Export as CSV', tasks_path(format: "csv") %>
+<%= link_to 'Export as PDF', tasks_path(format: "pdf") %>
 <div id="tasks">
   <% @tasks.each do |task| %>
     <%= render task %>

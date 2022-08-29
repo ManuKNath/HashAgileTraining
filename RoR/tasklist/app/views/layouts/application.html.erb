@@ -15,9 +15,10 @@
   <body>
     <div>
       <p>
-      <% if alert %>
-        <p class="alert alert-danger"><%= alert %></p>
+        <% if alert %>
+          <p class="alert alert-danger"><%= alert %>
         <% end %>
+      </p>
       <% if user_signed_in? %>
         Logged in as <strong><%= current_user.email %></strong>.
         <%= link_to t('link.edit_profile'), edit_user_registration_path, :class => 'navbar-link' %> 
@@ -25,7 +26,6 @@
         <%= link_to t('link.task_list'), tasks_path,class:"navbar-link" %>
         <%= link_to t('link.new_task'), new_task_path,class:"navbar-link" %>
         <%= button_to t('link.sign_out'), destroy_user_session_path, method: :delete  %>
-        <p class="alert alert-success"><%= notice %></p> 
       <% end %>
       <%= yield %>
     </div>
@@ -36,5 +36,6 @@
       <br>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   </body>
 </html>

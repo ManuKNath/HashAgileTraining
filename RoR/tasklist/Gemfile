@@ -54,13 +54,17 @@ gem 'rufus-scheduler', '~> 3.2'
 gem 'whenever', require: false
 
 # Generate PDF
-# gem 'prawn', '~>2.2.2'
-gem 'puppet_pdf'
-gem 'wicked_pdf'
-gem 'wkhtmltopdf-binary'
+gem 'prawn'
+gem 'prawn-table'
+#gem 'puppet_pdf'
+#gem 'wicked_pdf'
+#gem 'wkhtmltopdf-binary'
 
 # Generate CSV
-gem 'csv_rails', '~> 0.7.0'
+gem 'csv_rails'
+
+# For using jQuery
+gem 'jquery-rails'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
