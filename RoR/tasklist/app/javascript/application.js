@@ -5,8 +5,7 @@ $(document).ready(function() {
         console.log("The assignee has been changed.");
         console.log($("#task_user_id").val());
         
-        console.log($(this).serialize());
-
+        
         e.preventDefault();
         $.ajax({
             type: 'POST',
